@@ -1,0 +1,330 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #00491a;
+    /* Alterado para #00491a */
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: #f8f8f8;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #00491a;
+    /* Alterado para #00491a */
+}
+
+header nav a {
+    text-decoration: none;
+    color: #00491a;
+    /* Alterado para #00491a */
+    margin-left: 20px;
+}
+
+header nav a:hover {
+    color: #24af54;
+}
+
+.hero {
+    background-image: url('img/fundo.jpg');
+    /* Substitua pelo caminho da sua imagem */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 50px 0;
+    margin-bottom: 20px;
+    height: 100vh;
+    /* Altura da seção ocupa toda a altura da janela */
+    position: relative;
+    display: flex;
+    /* Ativa o modelo flexbox */
+    align-items: center;
+    /* Centraliza verticalmente */
+    justify-content: center;
+    /* Centraliza horizontalmente */
+}
+
+/* Overlay sombra sobre a imagem */
+.hero::before {
+    content: "";
+    /* Cria um elemento vazio */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.259);
+    /* Cor preta com 50% de opacidade */
+    z-index: 1;
+}
+
+/* Estilos para o conteúdo dentro da .container */
+.hero .container {
+    position: relative;
+    z-index: 2;
+    /* Garante que o conteúdo fique acima do overlay */
+    color: #ffffff;
+    /* Cor do texto para garantir boa visibilidade */
+}
+
+/* Estilo do título */
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #00491a;
+    /* Cor do texto */
+}
+
+/* Estilo do botão */
+.hero button {
+    padding: 10px 20px;
+    background-color: #0d8f3a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hero button:hover {
+    background-color: #31b861;
+    /* Muda a cor de fundo para um tom mais escuro */
+    transform: scale(1.1);
+    /* Aumenta o tamanho do botão ligeiramente */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    /* Adiciona uma sombra suave */
+}
+
+
+.logo img {
+    height: 200px;
+    /* Altura base */
+    max-height: 200px;
+    /* Define um limite maior para a imagem */
+    width: auto;
+    /* Mantém a proporção */
+    transform: scale(1.3);
+    /* Aumenta a imagem sem alterar o layout */
+    transition: transform 0.3s ease;
+    /* Suaviza o aumento */
+}
+
+
+.services {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #00491a;
+    /* Alterado para #00491a */
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.service-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.service-content {
+    text-align: left;
+    color: #00491a;
+    /* Alterado para #00491a */
+}
+
+.service-content h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #00491a;
+    /* Alterado para #00491a */
+}
+
+.service-content ul {
+    list-style: disc;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.service-content li {
+    margin-bottom: 5px;
+}
+
+.about {
+    padding: 20px 0;
+    text-align: left;
+    background-color: #f8f8f8;
+    color: #00491a;
+}
+
+.about h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #00491a;
+    text-align: center;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.about-image {
+    width: 40%;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+    flex: 1;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+
+.contact {
+    background-color: #ffffff;
+    /* Cor de fundo mais limpa */
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+    border-radius: 10px;
+    /* Bordas arredondadas */
+    margin: 20px;
+}
+
+.contact-info {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #00491a;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.contact-item img {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+    /* Espaçamento entre ícone e texto */
+}
+
+.contact-item p {
+    margin: 0;
+}
+
+/* Adicionando um efeito de hover para cada item */
+.contact-item:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    color: #007bff;
+    /* Cor de destaque no hover */
+}
+
+
+/* Adicionando um efeito de hover para cada item */
+.contact-item:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    color: #007bff;
+    /* Cor de destaque no hover */
+}
+
+
+/* Estilo do botão do WhatsApp */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    /* Distância da parte inferior da tela */
+    right: 20px;
+    /* Distância da parte direita da tela */
+    z-index: 9999;
+    /* Garante que o botão fique sempre visível */
+    background-color: #25d366;
+    /* Cor do botão do WhatsApp */
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-button img {
+    width: 50px;
+    /* Tamanho do ícone do WhatsApp */
+    height: 50px;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1);
+    /* Aumenta o tamanho do botão ao passar o mouse */
+}
+
+
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    bottom: 0;
+    width: 100%;
+}
+
+footer .container {
+    padding: 10px 0;
+}
