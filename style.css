@@ -91,6 +91,16 @@ header nav a:hover {
     border-radius: 2px;
 }
 
+/* Estilo do botão de fechar */
+.close-btn {
+    font-size: 2em;
+    color: #00491a;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
 /* Responsividade - quando a tela for menor que 768px */
 @media (max-width: 768px) {
 
@@ -105,6 +115,10 @@ header nav a:hover {
         flex-direction: column;
         align-items: center;
         padding: 20px 0;
+        height: 100%;
+        /* Ocupa toda a altura da tela */
+        overflow-y: auto;
+        /* Permite rolar */
     }
 
     .nav-links li {
@@ -119,6 +133,11 @@ header nav a:hover {
     .nav-links.active {
         display: flex;
         /* Exibe o menu quando ele tiver a classe 'active' */
+    }
+
+    .close-btn {
+        display: block;
+        /* Exibe o botão de fechar no menu */
     }
 }
 
